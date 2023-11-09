@@ -74,43 +74,47 @@
                     <form action="AddKuisioner" id="kuisioner" name="kuisioner" method="post"
                         enctype="multipart/form-data">
                         @csrf
-                        <div>
-                            <div class="mt-3">
-                                <label for="exampleFormControlInput1" class="form-label">Nama</label>
-                                <input type="text" class="form-control" name="Nama" id="Nama" value=""
-                                    style="width: 35rem;" required="" placeholder="Nama">
+                        @foreach ($pertanyaan as $p)
+                            <div>
+                                <div class="mt-3">
+                                    <label for="exampleFormControlInput1" class="form-label">Nama</label>
+                                    <input type="text" class="form-control" name="Nama" id="Nama"
+                                        value="" style="width: 35rem;" required="" placeholder="Nama">
+                                </div>
+                                <div class="mt-3">
+                                    <label for="exampleFormControlInput1" class="form-label">Alamat</label>
+                                    <textarea class="form-control" id="Alamat" name="Alamat" style="width: 35rem;" placeholder="Alamat" rows="3"></textarea>
+                                </div>
+                                <div class="mt-3">
+                                    <label for="exampleFormControlInput1" class="form-label">Nomor Whatsapp</label>
+                                    <input type="text" class="form-control" name="NoWa" id="NoWa"
+                                        value="" style="width: 35rem;" required=""
+                                        placeholder="exp-087819023708">
+                                </div>
+                                <div class="mt-3">
+                                    <label for="exampleFormControlInput1" class="form-label">Instagram</label>
+                                    <input type="text" class="form-control" name="Instagram" id="Instagram"
+                                        value="" style="width: 35rem;" required=""
+                                        placeholder="esp-@kilokopi.bpn">
+                                </div>
+                                <h2 class="d-flex justify-content-center mt-3 mb-3">Survey Kepuasan Kilokopi</h2>
+                                <div class="mt-3">
+                                    <label for="exampleFormControlInput1" class="form-label">{{ $p->questions }}</label>
+                                    <input type="text" class="form-control" name="Petanyaan1" id="Petanyaan1"
+                                        value="" style="width: 35rem;" required="" placeholder="">
+                                </div>
+                                <div class="mt-3">
+                                    <label for="exampleFormControlInput1" class="form-label">Pertanyaan 2</label>
+                                    <input type="text" class="form-control" name="Pertanyaan2" id="Pertanyaan2"
+                                        value="" style="width: 35rem;" required="" placeholder="">
+                                </div>
+                                <div class="mt-3">
+                                    <label for="exampleFormControlInput1" class="form-label">Foto</label>
+                                    <input class="form-control" style="width: 35rem;" type="file" name="poto"
+                                        id="poto" accept="image/*">
+                                </div>
                             </div>
-                            <div class="mt-3">
-                                <label for="exampleFormControlInput1" class="form-label">Alamat</label>
-                                <textarea class="form-control" id="Alamat" name="Alamat" style="width: 35rem;" placeholder="Alamat" rows="3"></textarea>
-                            </div>
-                            <div class="mt-3">
-                                <label for="exampleFormControlInput1" class="form-label">Nomor Whatsapp</label>
-                                <input type="text" class="form-control" name="NoWa" id="NoWa" value=""
-                                    style="width: 35rem;" required="" placeholder="exp-087819023708">
-                            </div>
-                            <div class="mt-3">
-                                <label for="exampleFormControlInput1" class="form-label">Instagram</label>
-                                <input type="text" class="form-control" name="Instagram" id="Instagram"
-                                    value="" style="width: 35rem;" required="" placeholder="esp-@kilokopi.bpn">
-                            </div>
-                            <h2 class="d-flex justify-content-center mt-3 mb-3">Survey Kepuasan Kilokopi</h2>
-                            <div class="mt-3">
-                                <label for="exampleFormControlInput1" class="form-label">Pertanyaan 1</label>
-                                <input type="text" class="form-control" name="Petanyaan1" id="Petanyaan1"
-                                    value="" style="width: 35rem;" required="" placeholder="">
-                            </div>
-                            <div class="mt-3">
-                                <label for="exampleFormControlInput1" class="form-label">Pertanyaan 2</label>
-                                <input type="text" class="form-control" name="Pertanyaan2" id="Pertanyaan2"
-                                    value="" style="width: 35rem;" required="" placeholder="">
-                            </div>
-                            <div class="mt-3">
-                                <label for="exampleFormControlInput1" class="form-label">Foto</label>
-                                <input class="form-control" style="width: 35rem;" type="file" name="poto"
-                                    id="poto" accept="image/*">
-                            </div>
-                        </div>
+                        @endforeach
                         <div class="d-flex justify-content-center mb-5 mt-3">
                             <button type="submit" class="btn btn-warning">Submit</button>
                         </div>
