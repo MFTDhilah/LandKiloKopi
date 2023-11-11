@@ -74,8 +74,8 @@
                     <form action="AddKuisioner" id="kuisioner" name="kuisioner" method="post"
                         enctype="multipart/form-data">
                         @csrf
-                        @foreach ($pertanyaan as $p)
-                            <div>
+                        
+                        <div>
                                 <div class="mt-3">
                                     <label for="exampleFormControlInput1" class="form-label">Nama</label>
                                     <input type="text" class="form-control" name="Nama" id="Nama"
@@ -98,23 +98,29 @@
                                         placeholder="esp-@kilokopi.bpn">
                                 </div>
                                 <h2 class="d-flex justify-content-center mt-3 mb-3">Survey Kepuasan Kilokopi</h2>
+                                @foreach ($quest as $p)
+                                @if($p->enabled==1)
+                                @if($p->id==1)
                                 <div class="mt-3">
-                                    <label for="exampleFormControlInput1" class="form-label">{{ $p->questions }}</label>
-                                    <input type="text" class="form-control" name="Petanyaan1" id="Petanyaan1"
-                                        value="" style="width: 35rem;" required="" placeholder="">
+                                    <label for="exampleFormControlInput1" class="form-label">{{ $p->pertanyaan }}</label>
+                                    <textarea class="form-control" name="Pertanyaan1" id="Pertanyaan1" value="" style="width: 35rem;" required="" placeholder="Jawaban Anda..." rows="3"></textarea>
                                 </div>
+                                @elseif($p->id==2)
                                 <div class="mt-3">
-                                    <label for="exampleFormControlInput1" class="form-label">Pertanyaan 2</label>
-                                    <input type="text" class="form-control" name="Pertanyaan2" id="Pertanyaan2"
-                                        value="" style="width: 35rem;" required="" placeholder="">
+                                    <label for="exampleFormControlInput1" class="form-label">{{ $p->pertanyaan }}</label>
+                                    <textarea class="form-control" name="Pertanyaan2" id="Pertanyaan2" value="" style="width: 35rem;" required="" placeholder="Jawaban Anda..." rows="3"></textarea>
                                 </div>
+                                @endif
+                                @endif
+                                @endforeach
+                            
                                 <div class="mt-3">
-                                    <label for="exampleFormControlInput1" class="form-label">Foto</label>
+                                    <label for="exampleFormControlInput1" class="form-label">Bukti Follow Instagram @kilokopi_bpn</label>
                                     <input class="form-control" style="width: 35rem;" type="file" name="poto"
                                         id="poto" accept="image/*">
                                 </div>
                             </div>
-                        @endforeach
+                        
                         <div class="d-flex justify-content-center mb-5 mt-3">
                             <button type="submit" class="btn btn-warning">Submit</button>
                         </div>

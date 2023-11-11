@@ -9,5 +9,6 @@ class kuisioner extends Model
 {
     use HasFactory;
     protected $table = 'kuisioner';
+    protected $fillable = ['Nama', 'Alamat', 'NoWa', 'Instagram', 'Pertanyaan1', 'Pertanyaan2',	'poto'];
     protected $guarded = [];
 }

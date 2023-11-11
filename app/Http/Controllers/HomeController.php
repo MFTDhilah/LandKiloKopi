@@ -8,6 +8,7 @@ use App\Models\Contact;
 use App\Models\kuisioner;
 use App\Models\Menu;
 use App\Models\Promo;
+use App\Models\Questions;
 
 class HomeController extends Controller
 {
@@ -19,7 +20,8 @@ class HomeController extends Controller
         $contact = Contact::all();
         $menu = Menu::all();
         $promo = Promo::all();
+        $quest = Questions::all();
 
-        return view('home',compact('about','contact','menu', 'promo') );
+        return view('home',compact('about','contact','menu', 'promo', 'quest') );
     }
 }

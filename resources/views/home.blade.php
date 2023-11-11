@@ -84,11 +84,9 @@
                     @foreach ($promo as $promo)
                         @if ($promo->enabled == 1)
                             <div class="menu-card">
-                                {{-- <img src="{{ $promo->image }}" width="100%" height="100%" alt=""
-                                    class="img-fluid" style="height: 250px;"> --}}
+                                {!! $promo->image !!}
                                 {!! $promo->description !!}
                                 <h3 class="menu-card-title">- {{ $promo->title }} -</h3>
-                                <p> {{ $promo->image }} </p>
                             </div>
                         @endif
                     @endforeach
@@ -108,7 +106,6 @@
                         @if ($menu->enabled == 1)
                             <div class="menu-card">
                                 {!! $menu->image !!}
-                                {{-- <img src="{{$menu->image}}" width="100%" height="100%" alt="" class="img-fluid" style="height: 250px;"> --}}
                                 <h3 class="menu-card-title">- {{ $menu->title }} -</h3>
                                 <p> {{ $menu->description }} </p>
                                 <p class="menu-card-price">Rp. {{ number_format($menu->price) }}</p>
@@ -130,52 +127,22 @@
                         src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15955.822677878356!2d116.8842081!3d-1.1914791!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2df1497cad8de225%3A0xd4f4e0a05de1352a!2sKilo%20Kopi!5e0!3m2!1sen!2sid!4v1698243445720!5m2!1sen!2sid"
                         allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
                         class="map"></iframe>
-                    <div class="information">
-                        <div class="input-group">
-                            <div>
+                        
+                            <div style="">
                                 <h1>Phone</h1>
                                 <p>{{ $contact->telepon }}</p>
-                            </div>
-                            <div>
+                                <h1>Open Hours</h1>
+                                <p>{{ $contact->jam_operasional }}</p>
                                 <h1>Address</h1>
                                 <p>{{ $contact->alamat }}</p>
                             </div>
-                            <div>
-                                <h1>Open Hours</h1>
-                                <p>{{ $contact->jam_operasional }}</p>
-                            </div>
-                        </div>
-                    </div>
+                            
                 @empty
                     <tr>
                         <td colspan="5" class="text-center">Tidak Ada Data</td>
                     </tr>
                 @endforelse
 
-                {{-- <form action="">
-                <div class="input-group">
-                    <h1>Tes Judul</h1>
-                    <p>Ini isinya</p>
-                </div>
-                <div class="input-group">
-                    <i data-feather="user"></i>
-                    <input type="text" placeholder="Nama" />
-                </div>
-                <div class="input-group">
-                    <i data-feather="mail"></i>
-                    <input type="text" placeholder="Email" />
-                </div>
-                <div class="input-group">
-                    <i data-feather="phone"></i>
-                    <input type="text" placeholder="No. Handphone" />
-                </div>
-                <div class="input-group">
-                    <i data-feather="archive"></i>
-                    <input type="text" placeholder="Masukkan untuk kami" />
-                </div>
-
-                <button type="submit" class="btn">Kirim</button>
-            </form> --}}
             </div>
         </section>
         <!-- Feedback Section Start -->
@@ -320,7 +287,7 @@
             </div>
 
             <div class="credit">
-                <p>Created by <a href="">sandhikagalih</a>. | &copy; 2023.</p>
+                <p>Copyright <a href="">KiloKopi</a>. | &copy; 2023.</p>
             </div>
         </footer>
     </body>

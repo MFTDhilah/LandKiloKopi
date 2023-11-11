@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\kuisioner;
-use App\Models\pertanyaan;
+use App\Models\Questions;
 use Illuminate\Http\Request;
 use File;
 
@@ -11,8 +11,8 @@ class KuisionerController extends Controller
 {
     public function index()
     {
-        $pertanyaan = pertanyaan::all();
-        return view('kuisioner.kuisioner', compact(['pertanyaan']));
+        $quest = Questions::all();
+        return view('kuisioner.kuisioner', compact(['quest']));
     }
 
     public function store(Request $request)
@@ -23,6 +23,6 @@ class KuisionerController extends Controller
             $kuisioner->poto=$request->file('poto')->getClientOriginalName();
             $kuisioner->save();
         }
-        return redirect('https://wa.me/6283140457656');
+        return redirect('https://wa.me/6283140457656?text=Halo%20kak%20aku%20udah%20isi%20kuesioner%20nihhh%2C%20code%20promo%20buat%20aku%20mana%20yaaa%3F%3F%3F%3F');
     }
 }
