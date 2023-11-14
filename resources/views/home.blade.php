@@ -105,10 +105,12 @@
                     @foreach ($menu as $menu)
                         @if ($menu->enabled == 1)
                             <div class="menu-card">
-                                {!! $menu->image !!}
-                                <h3 class="menu-card-title">- {{ $menu->title }} -</h3>
-                                <p> {{ $menu->description }} </p>
-                                <p class="menu-card-price">Rp. {{ number_format($menu->price) }}</p>
+                                <div style="width: 300px; height:300px;">
+                                    {!! $menu->image !!}
+                                    <h3 class="menu-card-title">- {{ $menu->title }} -</h3>
+                                    <p> {{ $menu->description }} </p>
+                                    <p class="menu-card-price">Rp. {{ number_format($menu->price) }}</p>
+                                </div>
                             </div>
                         @endif
                     @endforeach
@@ -127,16 +129,16 @@
                         src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15955.822677878356!2d116.8842081!3d-1.1914791!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2df1497cad8de225%3A0xd4f4e0a05de1352a!2sKilo%20Kopi!5e0!3m2!1sen!2sid!4v1698243445720!5m2!1sen!2sid"
                         allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
                         class="map"></iframe>
-                        
-                            <div style="">
-                                <h1>Phone</h1>
-                                <p>{{ $contact->telepon }}</p>
-                                <h1>Open Hours</h1>
-                                <p>{{ $contact->jam_operasional }}</p>
-                                <h1>Address</h1>
-                                <p>{{ $contact->alamat }}</p>
-                            </div>
-                            
+
+                    <div style="">
+                        <h1>Phone</h1>
+                        <p>{{ $contact->telepon }}</p>
+                        <h1>Open Hours</h1>
+                        <p>{{ $contact->jam_operasional }}</p>
+                        <h1>Address</h1>
+                        <p>{{ $contact->alamat }}</p>
+                    </div>
+
                 @empty
                     <tr>
                         <td colspan="5" class="text-center">Tidak Ada Data</td>
