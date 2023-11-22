@@ -100,17 +100,10 @@
                                 <h2 class="d-flex justify-content-center mt-3 mb-3">Survey Kepuasan Kilokopi</h2>
                                 @foreach ($quest as $p)
                                 @if($p->enabled==1)
-                                @if($p->id==1)
                                 <div class="mt-3">
                                     <label for="exampleFormControlInput1" class="form-label">{{ $p->pertanyaan }}</label>
-                                    <textarea class="form-control" name="Pertanyaan1" id="Pertanyaan1" value="" style="width: 35rem;" required="" placeholder="Jawaban Anda..." rows="3"></textarea>
+                                    <textarea class="form-control" name="Jawaban[]" id="Jawaban" value="{{ $p -> id}}" style="width: 35rem;" required="" placeholder="Jawaban Anda..." rows="3"></textarea>
                                 </div>
-                                @elseif($p->id==2)
-                                <div class="mt-3">
-                                    <label for="exampleFormControlInput1" class="form-label">{{ $p->pertanyaan }}</label>
-                                    <textarea class="form-control" name="Pertanyaan2" id="Pertanyaan2" value="" style="width: 35rem;" required="" placeholder="Jawaban Anda..." rows="3"></textarea>
-                                </div>
-                                @endif
                                 @endif
                                 @endforeach
                             

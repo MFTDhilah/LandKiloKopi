@@ -8,7 +8,8 @@ use Illuminate\Database\Eloquent\Model;
 class kuisioner extends Model
 {
     use HasFactory;
+    protected $guarded = ['id'];
     protected $table = 'kuisioner';
-    protected $fillable = ['Nama', 'Alamat', 'NoWa', 'Instagram', 'Pertanyaan1', 'Pertanyaan2',	'poto'];
-    protected $guarded = [];
+    protected $fillable = ['Nama', 'Alamat', 'NoWa', 'Instagram', 'Jawaban', 'poto'];
+
 }
