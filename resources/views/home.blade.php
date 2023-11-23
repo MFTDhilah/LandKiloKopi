@@ -105,11 +105,11 @@
                     @foreach ($menu as $menu)
                         @if ($menu->enabled == 1)
                             <div class="menu-card">
-                                <div style="width: 300px; height:300px;">
+                                <div>
                                     {!! $menu->image !!}
                                     <h3 class="menu-card-title">- {{ $menu->title }} -</h3>
-                                    <p> {{ $menu->description }} </p>
-                                    <p class="menu-card-price">Rp. {{ number_format($menu->price) }}</p>
+                                    <p style="font-size:16px"> {{ $menu->description }} </p><br>
+                                    <strong class="menu-card-price">Rp. {{ number_format($menu->price) }}</strong>
                                 </div>
                             </div>
                         @endif
