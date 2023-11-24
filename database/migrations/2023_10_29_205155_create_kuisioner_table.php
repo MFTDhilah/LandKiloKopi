@@ -19,8 +19,7 @@ return new class extends Migration
             $table->string('Alamat');
             $table->char('NoWa');
             $table->char('Instagram');
-            $table->char('Petanyaan1');
-            $table->char('Pertanyaan2');
+            $table->char('Jawaban');
             $table->string('poto');
             $table->timestamps();
         });
