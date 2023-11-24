@@ -176,6 +176,17 @@ body {
     margin-bottom: 3rem;
 }
 
+.team h3,
+.about h3,
+.menu h3,
+.contact h3,
+.products h3,
+.feedback h3 {
+    text-align: center;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
 .team h2 span,
 .about h2 span,
 .menu h2 span,
@@ -238,6 +249,7 @@ body {
     display: flex;
     flex-wrap: wrap;
     margin-top: 1rem;
+    margin-bottom: 5rem;
     justify-content: center;
 }
 
@@ -549,4 +561,52 @@ footer .credit a {
     html {
         font-size: 55%;
     }
+}
+
+.container {
+    display: flex;
+}
+
+/* .container:hover > .card {
+    cursor: pointer;
+    transform: rotateY(180deg);
+} */
+
+/* .kontak-card {
+    height: 350px;
+    width: 200px;
+    border-radius: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5rem;
+} */
+
+/* .front,
+    .back {
+        height: 100%;
+        width: 100%;
+        border-radius: 2rem;
+        box-shadow: 0 0 5px 2px rgba(50, 50, 50, 0.25);
+        position: absolute;
+        transform: rotateY(180deg);
+    } */
+
+/* .back {
+    background-color: #3a3a3a;
+    transform: rotateY(180deg);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5rem;
+} */
+
+.container-row {
+    height: 5rem;
+    display: flex;
+    justify-content: space-around;
+    margin-top: 2rem;
+    background-color: #0000;
 }
