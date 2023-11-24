@@ -77,8 +77,9 @@
                 @if (isset($promo))
                     @foreach ($promo as $promo)
                         @if ($promo->enabled == 1)
-                            <div class="menu-card">
+                            <div class="menu-card " style="font-size:14px">
                                 {!! $promo->image !!}
+                                <br>
                                 {!! $promo->description !!}
                                 <h3 class="menu-card-title">- {{ $promo->title }} -</h3>
                             </div>
@@ -86,7 +87,7 @@
                     @endforeach
                 @endif
             </div>
-            <h2><a href="kuisioner"> Claim Kode Promo Kamu Disini</a></h2>
+            <h2><mark><a href="kuisioner" style="padding-left: 10px;padding-right: 10px; color: #000000">Claim Kode Promo</a></mark></h2>
         </section>
 
         {{-- Our Menu --}}
@@ -98,11 +99,11 @@
                 @if (isset($menu))
                     @foreach ($menu as $menu)
                         @if ($menu->enabled == 1)
-                            <div class="menu-card">
+                            <div class="menu-card" style="font-size:14px">
                                 <div>
                                     {!! $menu->image !!}
                                     <h3 class="menu-card-title">- {{ $menu->title }} -</h3>
-                                    <p style="font-size:16px"> {{ $menu->description }} </p><br>
+                                    <p> {{ $menu->description }} </p><br>
                                     <strong class="menu-card-price">Rp. {{ number_format($menu->price) }}</strong>
                                 </div>
                             </div>
@@ -178,21 +179,17 @@
             }
         </script>
         <footer>
-            <div class="socials">
-                <a href="#"><i data-feather="instagram"></i></a>
-                <a href="#"><i data-feather="twitter"></i></a>
-                <a href="#"><i data-feather="facebook"></i></a>
-            </div>
 
-            <div class="links">
+            <div class="links" style="color: #010101; font-size: 13px">
+                <strong>
                 <a class="scroll-link" href="#home">Home</a>
                 <a class="scroll-link" href="#menu">Product</a>
                 <a class="scroll-link" href="#contact">Contact</a>
-                <a class="" href="/login">Login</a>
+                </strong>
             </div>
 
             <div class="credit">
-                <p>Copyright <a href="">KiloKopi</a>. | &copy; 2023.</p>
+                <strong style="color: #010101; font-size: 11px">Copyright <a href="">KiloKopi</a>. | &copy; 2023.</strong>
             </div>
         </footer>
     </body>
