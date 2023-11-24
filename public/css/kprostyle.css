@@ -607,7 +607,12 @@ footer .credit a {
 .container-row {
     height: 5rem;
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     margin-top: 2rem;
     background-color: #0000;
+    margin-bottom: 6rem;
+}
+
+.content-row {
+    width: 33%;
 }
