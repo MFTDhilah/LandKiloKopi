@@ -55,9 +55,10 @@
         <section class="hero" id="home">
             <main class="content">
                 <h1>Silahkan isi survey untuk mendapatkan kode promo</h1>
-                <p>syarat&ketentuan
+                <strong><mark>Syarat & ketentuan
                     wajib follow ig @kilokopi_bpn dan kirim bukti pada form
-                </p>
+                    </mark></strong>
+                {{-- <a href="#menu" class="cta scroll-link">Our Menu!!!</a> --}}
             </main>
         </section>
         <section class="d-flex justify-content-center">
@@ -78,30 +79,32 @@
                                 <div class="mt-3">
                                     <label for="exampleFormControlInput1" class="form-label">Nama</label>
                                     <input type="text" class="form-control" name="Nama" id="Nama"
-                                        value="" style="width: 35rem;" required="" placeholder="Nama">
+                                        value=""  required="" placeholder="Nama">
                                 </div>
                                 <div class="mt-3">
                                     <label for="exampleFormControlInput1" class="form-label">Alamat</label>
-                                    <textarea class="form-control" id="Alamat" name="Alamat" style="width: 35rem;" placeholder="Alamat" rows="3"></textarea>
+                                    <textarea class="form-control" id="Alamat" name="Alamat"  placeholder="Alamat" rows="3"></textarea>
                                 </div>
                                 <div class="mt-3">
                                     <label for="exampleFormControlInput1" class="form-label">Nomor Whatsapp</label>
                                     <input type="text" class="form-control" name="NoWa" id="NoWa"
-                                        value="" style="width: 35rem;" required=""
+                                        value=""  required=""
                                         placeholder="exp-087819023708">
                                 </div>
                                 <div class="mt-3">
                                     <label for="exampleFormControlInput1" class="form-label">Instagram</label>
                                     <input type="text" class="form-control" name="Instagram" id="Instagram"
-                                        value="" style="width: 35rem;" required=""
+                                        value=""  required=""
                                         placeholder="esp-@kilokopi.bpn">
                                 </div>
-                                <h2 class="d-flex justify-content-center mt-3 mb-3">Survey Kepuasan Kilokopi</h2>
+                                <br>
+                                <br>
+                                <h1 class="d-flex justify-content-center mt-3 mb-3">Survey Kepuasan Kilokopi</h1>
                                 @foreach ($quest as $p)
                                 @if($p->enabled==1)
                                 <div class="mt-3">
                                     <label for="exampleFormControlInput1" class="form-label">{{ $p->pertanyaan }}</label>
-                                    <textarea class="form-control" name="Jawaban[]" id="Jawaban" value="{{ $p -> id}}" style="width: 35rem;" required="" placeholder="Jawaban Anda..." rows="3"></textarea>
+                                    <textarea class="form-control" name="Jawaban[]" id="Jawaban" value="{{ $p -> id}}"  required="" placeholder="Jawaban Anda..." rows="3"></textarea>
                                 </div>
                                 @endif
                                 @endforeach
@@ -151,7 +154,7 @@
                             <div class="mt-3">
                                 <label for="exampleFormControlInput1" class="form-label">Bukti Follow Instagram
                                     @kilokopi_bpn</label>
-                                <input class="form-control" style="width: 35rem;" type="file" name="poto"
+                                <input class="form-control"  type="file" name="poto"
                                     id="poto" accept="image/*">
                             </div>
                         </div>
